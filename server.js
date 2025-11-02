@@ -23,10 +23,11 @@ app.get('/api/reviews', (req, res) => {
 
 // Add a new review
 app.post('/api/reviews', (req, res) => {
-  const { name, rating, text } = req.body;
+  const { name, category, rating, text } = req.body;
   const newReview = {
     id: Date.now(),
     name,
+    category,
     rating: Number(rating),
     text,
     timestamp: new Date().toISOString()
