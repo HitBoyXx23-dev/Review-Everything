@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Everything ⭐</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎈 Review Everything 🎈</h1>
+    <p>Review anything you like — powered by the joy of reviewing!</p>
+  </header>
+
+  <main>
+    <section id="review-form">
+      <h2>Write a Review</h2>
+      <form id="form">
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <!-- Category Dropdown -->
+        <select id="category" required>
+          <option value="" disabled selected>Choose a category</option>
+          <option value="Show">TV Show</option>
+          <option value="Movie">Movie</option>
+          <option value="Game">Game</option>
+          <option value="Food">Food</option>
+          <option value="Book">Book</option>
+          <option value="Product">Product</option>
+          <option value="Product">Other</option>
+        </select>
+
+        <!-- Star Rating System -->
+        <div class="star-rating">
+          <span>Rating: </span>
+          <div class="stars">
+            <i class="star" data-value="1">★</i>
+            <i class="star" data-value="2">★</i>
+            <i class="star" data-value="3">★</i>
+            <i class="star" data-value="4">★</i>
+            <i class="star" data-value="5">★</i>
+          </div>
+          <input type="hidden" id="rating" required>
+        </div>
+
+        <textarea id="text" placeholder="Your review..." rows="4" required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
+
+    <section id="reviews">
+      <h2>All Reviews (<span id="count">0</span>)</h2>
+
+      <div id="category-filter">
+        <span>Filter by category: </span>
+        <select id="filter-category">
+          <option value="All">All</option>
+          <option value="Show">TV Show</option>
+          <option value="Movie">Movie</option>
+          <option value="Game">Game</option>
+          <option value="Food">Food</option>
+          <option value="Book">Book</option>
+          <option value="Product">Product</option>
+          <option value="Product">Other</option>
+        </select>
+      </div>
+
+      <ul id="review-list"></ul>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
