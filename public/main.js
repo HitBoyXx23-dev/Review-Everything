@@ -28,7 +28,8 @@ const loadReviews = async (filter = 'All') => {
     .map(r => `
     <li class="review-item">
       <span class="category-tag category-${r.category}">${r.category}</span>
-      <strong>${r.name}</strong> <span style="color: #ffce00;">${'★'.repeat(r.rating)}</span><br>
+      <strong>${r.name}</strong> 
+      <span style="color: #d995ff">${'★'.repeat(r.rating)}</span><br>
       <p>${r.text}</p>
       <small>${new Date(r.timestamp).toLocaleString()}</small>
     </li>`
